@@ -16,6 +16,33 @@
   "console_title_template": "{{ .UserName }}@{{ .HostName }}",
   "blocks": [
     {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#007acc",
+          "style": "plain",
+          "template": "{{ .Name }}",
+          "type": "shell"
+        },
+        {
+          "foreground": "#ff8080",
+          "style": "plain",
+          "template": " <#757575,>as</> root",
+          "type": "root"
+        },
+        {
+          "foreground": "#689f38",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": " <#757575,>|</> {{ .CurrentDate | date .Format }}",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
       "alignment": "left",
       "newline": true,
       "segments": [
