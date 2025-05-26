@@ -16,33 +16,6 @@
   "console_title_template": "{{ .UserName }}@{{ .HostName }}",
   "blocks": [
     {
-      "alignment": "right",
-      "segments": [
-        {
-          "foreground": "#007acc",
-          "style": "plain",
-          "template": "{{ .Name }}",
-          "type": "shell"
-        },
-        {
-          "foreground": "#ff8080",
-          "style": "plain",
-          "template": " <#757575,>as</> root",
-          "type": "root"
-        },
-        {
-          "foreground": "#689f38",
-          "properties": {
-            "time_format": "15:04:05"
-          },
-          "style": "plain",
-          "template": " <#757575,>|</> {{ .CurrentDate | date .Format }}",
-          "type": "time"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
       "alignment": "left",
       "newline": true,
       "segments": [
@@ -71,6 +44,33 @@
           "style": "plain",
           "template": "<p:yellow>git</>:({{ if or (.Working.Changed) (.Staging.Changed) (gt .StashCount 0) }}<p:magenta>{{ .HEAD }}</>{{ else }}<p:green>{{ .HEAD }}</>{{ end }}{{ if (gt .Ahead 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<p:cyan>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }}{{ if .Working.Changed }} <p:red>{{ .Working.String }}</>{{ end }})",
           "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "foreground": "#007acc",
+          "style": "plain",
+          "template": "{{ .Name }}",
+          "type": "shell"
+        },
+        {
+          "foreground": "#ff8080",
+          "style": "plain",
+          "template": " <#757575,>as</> root",
+          "type": "root"
+        },
+        {
+          "foreground": "#689f38",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "style": "plain",
+          "template": " <#757575,>|</> {{ .CurrentDate | date .Format }}",
+          "type": "time"
         }
       ],
       "type": "prompt"
