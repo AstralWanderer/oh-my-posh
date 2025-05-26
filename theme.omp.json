@@ -49,28 +49,6 @@
       "type": "prompt"
     },
     {
-      "alignment": "right",
-      "segments": [
-        {
-          "foreground": "#ff8080",
-          "style": "plain",
-          "template": " <#757575,>as</> root",
-          "type": "root"
-        },
-        {
-          "foreground": "white",
-          "properties": {
-            "always_enabled": true,
-            "style": "round"
-          },
-          "style": "plain",
-          "template": " {{ .FormattedMs }} ",
-          "type": "executiontime"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
       "alignment": "left",
       "newline": true,
       "segments": [
