@@ -69,8 +69,8 @@
             "time_format": "15:04:05"
           },
           "style": "plain",
-          "template": " <#757575,>|</> {{ .CurrentDate | date .Format }}",
-          "type": "time"
+          "template": " <#757575,>|</> {{ .FormattedMs }}",
+          "type": "executiontime"
         }
       ],
       "type": "prompt"
